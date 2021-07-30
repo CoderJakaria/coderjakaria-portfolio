@@ -1,0 +1,154 @@
+.blogs {
+  display: grid;
+  place-items: center;
+}
+
+.blogs__headerText {
+  width: 40%;
+  margin: 50px auto;
+}
+
+.blogs__headerText > h2,
+.blogs__headerText > p {
+  text-align: center;
+}
+
+.blogs__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+  position: relative;
+  margin: 0 0 50px 0;
+  color: var(--c-textColor);
+}
+
+.blogs__title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 20%;
+  left: 40%;
+  bottom: -10px;
+  border-radius: 10px;
+  background: black;
+}
+
+.blogs__title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  left: 35%;
+  bottom: -17px;
+  border-radius: 10px;
+  background: black;
+}
+
+.blogs__boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 0 50px 0;
+}
+
+.blogs__hireMeSection {
+  width: 100%;
+  height: 370px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+  margin: 50px 0 0px 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.blogs__hireMeSection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c-textColor);
+  z-index: 5;
+  opacity: 0.7;
+}
+
+.blogs__hireMeInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 6;
+}
+
+.blogs__hireMeInfo > h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.blogs__hireMeInfo > h1 > span {
+  color: #a0f569;
+}
+
+.blogs__hireMeInfo > p {
+  text-align: center;
+  width: 80%;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.blogs__hireMeInfo > a {
+  background: var(--c-textColor);
+  color: white;
+  padding: 1rem;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #3e64ff;
+  box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+  -moz-box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.09);
+}
+
+.blogs__hireMeInfo > a:hover {
+  color: black;
+}
+
+@media (max-width: 960px) {
+  .blogs__boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blogs__headerText {
+    width: 60%;
+  }
+
+  .blogs__title {
+    margin: 0 0 30px 0;
+  }
+
+  .blogs__hireMeInfo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogs__boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .blogs__headerText {
+    width: 80%;
+  }
+}

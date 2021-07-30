@@ -1,0 +1,43 @@
+.blogsBoxes {
+  /* width: 330px; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.blogsBoxes > img {
+  width: 100%;
+  height: 320px;
+  cursor: pointer;
+}
+
+.blogsBoxes > h2 {
+  font-weight: 500;
+  color: #676767;
+  font-size: 20px;
+  padding: 15px 0 10px 0;
+  cursor: pointer;
+}
+
+.blogBoxes__timestamp {
+  color: var(--c-textColor);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+}
+.blogBoxes__timestamp > span {
+  margin-left: 15px;
+}
+
+.blogBoxes__timestampIconField {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.blogsBoxes > p {
+  color: #a2a2a2;
+  line-height: 30px;
+}

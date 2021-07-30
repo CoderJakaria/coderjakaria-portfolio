@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  height: 50px;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid transparent;
+
+  /* Animation  */
+  animation-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.navbar__black {
+  position: fixed;
+  background: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.navbar__logo {
+  width: 100px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.navbar__items {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.5;
+  margin-right: 50px;
+}
+
+.navbar__items > a {
+  font-size: 17px;
+  cursor: pointer;
+  color: rgb(70, 70, 70);
+  position: relative;
+  /* padding-left: 50px; */
+  margin-left: 50px;
+  font-weight: 500;
+}
+
+.navbar__items > a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--c-textColor);
+  height: 3px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.navbar__items > a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: var(--c-textColor);
+  height: 3px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  transform: scale(1);
+}
+
+.navbar__menuIcon {
+  display: none !important;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  z-index: 101;
+}
+
+/* Responsiveness */
+@media (max-width: 960px) {
+  .navbar__menuIcon {
+    display: block !important;
+    z-index: 120;
+  }
+
+  .navbar {
+    /* background: transparent; */
+    border: none;
+  }
+
+  .navbar__items {
+    flex-direction: column;
+    background: white;
+    width: 30%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    box-shadow: 1px 1px 20px 1px gray;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease-in;
+    justify-content: start;
+    margin-right: 0;
+  }
+
+  .navbar__items > a {
+    padding: 15px 20px;
+    margin: 0;
+    transition: background 0.2s ease;
+  }
+
+  .navbar__items > a:hover {
+    background: lightgray;
+  }
+
+  .navbar__menuActive {
+    transform: scale(1);
+  }
+
+  .navbar__items > a:hover::after {
+    transform: scale(0);
+  }
+}

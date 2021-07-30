@@ -1,0 +1,82 @@
+.projectBox {
+  /* width: 280px; */
+  height: 320px;
+  padding: 2rem 1rem;
+  background: #ffff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.projectBox > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projectBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 167, 155, 0.5),
+    rgba(150, 201, 61, 1)
+  );
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.projectBox:hover::before {
+  opacity: 1;
+}
+
+.projectBox__info {
+  position: relative;
+  z-index: 3;
+  color: #ffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+.projectBox:hover .projectBox__info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectBox__info > h1 {
+  margin: 0;
+}
+
+.projectBox__info > p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.projectBox__info > a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.projectBox__info > a:hover {
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}

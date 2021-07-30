@@ -1,0 +1,158 @@
+.contact {
+  display: grid;
+  place-items: center;
+}
+
+.contact__headTitles {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--c-textColor);
+  font-size: 35px;
+  position: relative;
+  margin: 50px 0 30px 0;
+}
+
+.contact__title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 20%;
+  left: 37%;
+  bottom: -10px;
+  border-radius: 10px;
+  background: black;
+}
+
+.contact__title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  left: 32%;
+  bottom: -17px;
+  border-radius: 10px;
+  background: black;
+}
+
+.contact__boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.contact__inputes {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  padding: 20px 0 0 0;
+}
+
+.contact__imgCon {
+  flex: 0.5;
+}
+
+.contact__imgCon > img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact__inputInfo {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.contact__inputInfo input,
+.contact__inputInfo textarea {
+  padding: 10px;
+  margin: 8px 50px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid lightgray;
+  outline: none;
+  border-radius: 5px;
+}
+
+.contact__inputInfo textarea {
+  height: 120px;
+}
+
+.contact__inputInfo button {
+  padding: 15px;
+  background: var(--c-textColor);
+  width: 40%;
+  margin: 8px 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.contact__inputInfo button:hover {
+  color: black;
+}
+
+@media (max-width: 960px) {
+  .contact__boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact__boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 830px) {
+  .contact__inputes {
+    flex-direction: column;
+  }
+
+  .contact__imgCon {
+    display: none;
+  }
+
+  .contact__inputInfo {
+    margin: auto;
+    width: 100%;
+  }
+
+  .contact__inputes {
+    padding: 0;
+  }
+}
+
+.contact__form_submit_success > p {
+  text-align: center;
+  background: #008000cc;
+  padding: 5px 10px;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: -34px;
+}
+
+.contact__form_submit_success {
+  display: flex;
+  justify-content: center;
+}

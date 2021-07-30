@@ -1,0 +1,11 @@
+.skillBar__texts {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: -10px;
+  color: #010101;
+}
+
+.skillBar__texts > p {
+  font-weight: 500;
+}

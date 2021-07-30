@@ -1,0 +1,44 @@
+.contactBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.contactBoxes__logo {
+  font-size: 30px !important;
+  width: 50px;
+  height: 50px;
+  background: var(--c-textColor) !important;
+  color: white !important;
+  padding: 20px !important;
+  border-radius: 50% !important;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactBoxes > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contactBoxes > p {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #a2a2a2;
+}
+
+.contactBoxes__isLink {
+  color: var(--c-textColor) !important;
+  cursor: pointer;
+}

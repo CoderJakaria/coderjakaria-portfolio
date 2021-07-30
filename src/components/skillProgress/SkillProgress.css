@@ -1,0 +1,27 @@
+.skillProgress {
+  display: flex;
+  padding: 26px;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+
+.skillProgress__timed {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px;
+  width: 100%;
+}
+
+.skillProgress > h3 {
+  padding-bottom: 20px;
+}
+
+.skillProgress__time > h3 {
+  font-size: 25px;
+}
+
+.skillProgress__time > p {
+  font-size: 14px;
+}

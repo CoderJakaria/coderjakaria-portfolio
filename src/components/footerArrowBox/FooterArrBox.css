@@ -1,0 +1,11 @@
+.footerArrBox {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  color: gray;
+  font-weight: 500;
+}
+
+.footerArrBox__icon {
+  margin-right: 5px;
+}
